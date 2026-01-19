@@ -85,7 +85,7 @@ function renderQuestion() {
     const resultMsg = document.getElementById('result-message');
     
     // Выводим текст вопроса.
-    document.getElementById('question-text').innerText = q.question; 
+    document.getElementById('question-text').innerText = q.text;
     // -------------------------------------------
 
     const optionsContainer = document.getElementById('options-container');

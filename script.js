@@ -84,6 +84,10 @@ function renderQuestion() {
     const btn = document.getElementById('show-answer-btn');
     const resultMsg = document.getElementById('result-message');
     
+    // Выводим текст вопроса.
+    document.getElementById('question-text').innerText = q.question; 
+    // -------------------------------------------
+
     const optionsContainer = document.getElementById('options-container');
     optionsContainer.innerHTML = '';
     
@@ -112,12 +116,9 @@ function renderQuestion() {
     // Если ответ уже есть в истории, восстанавливаем состояние
     if (savedAnswer) {
         state.isAnswered = true;
-        // Восстанавливаем выбор в Set для корректной логики (хотя UI обновляем отдельно)
         savedAnswer.selection.forEach(idx => state.currentSelection.add(idx));
-        
-        // Визуализируем результаты без повторного сохранения
         visualizeResult(q, savedAnswer.selection, savedAnswer.isCorrect);
-        btn.style.display = 'none'; // Скрываем кнопку, так как уже ответили
+        btn.style.display = 'none'; 
     } else {
         btn.style.display = 'block';
         btn.disabled = false;

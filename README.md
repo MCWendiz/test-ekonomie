@@ -10,7 +10,7 @@
 
 ## 🖼️ Screenshots
 
-![App Interface](./screenshots/preview.png)
+![App Interface](./preview.png)
 
 ## ✨ Key Features
 
